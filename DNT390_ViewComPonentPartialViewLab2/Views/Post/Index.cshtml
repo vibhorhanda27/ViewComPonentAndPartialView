@@ -1,0 +1,16 @@
+﻿@model PostViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<div>
+    Id:@Html.DisplayFor(model=>model.Id) <br />
+    Author: @Html.DisplayFor(model=>model.Author)<br />
+    Title: @Html.DisplayFor(model=>model.Title)<br />
+    Body: @Html.DisplayFor(model=>model.Body)<br />
+    
+</div>
+
+    @await Component.InvokeAsync("Comments", new {id=1}) 
